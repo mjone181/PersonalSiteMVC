@@ -18,15 +18,17 @@
 </head>
 <body>
     <!-- Header Content -->
-    <header>
-        <h1>My Personal Site</h1>
-        <p>
-            Excuse the mess, but I'm still working on things. This will look pretty eventually, I promise!
-        </p>
-    </header>
+    <div class="col-md-4">
+        <header>
+            <h1>My Personal Site</h1>
+            <p>
+                Excuse the mess, but I'm still working on things. This will look pretty eventually, I promise!
+            </p>
+        </header>
+    </div>    
     <!-- Header Content -->
     <!-- Nav Bar Content -->
-    <nav>
+    <nav class="nav">
         <ul>
             <li>
                 @Html.ActionLink("Home","Index","Home")
@@ -50,9 +52,12 @@
     @RenderBody()
     <!-- Main Content of the Page -->
     <!-- Footer Content -->
-    <footer>&#169;Mack Jones 2020</footer>
+    <div class="col-md-offset-4">
+        <footer>&#169;Mack Jones 2020</footer>
+    </div>    
     <!-- Footer Content -->
     <!-- Boostrap Scripting -->
     <script src="~/Content/Scripts/bootstrap.min.js"></script>
+    <script src="~/Content/Scripts/npm.js"></script>
 </body>
 </html>
