@@ -1,42 +1,61 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <!-- Character Set -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+
+    <!-- Special Internet Explorer treatment lifted from class. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Bootstrap Theme -->
+    <link href="CSS/bootstrap-theme.min.css" rel="stylesheet" />
+
+    <!-- Title -->
+    <title>Homepage (Work in Progress Site)</title>
+
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <!-- Header Content -->
+    <header>
+        <h1>Work In Progress Home Page (Will add content soon!)</h1>
+        <p>
+            Excuse the mess, but I'm still working on things. This will look pretty eventually, I promise!
+        </p>
+    </header>
+    <!-- Header Content -->
+    <!-- Nav Bar Content -->
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Index</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+            <li>
+                <a href="links.html">Links</a>
+            </li>
+            <li>
+                <a href="projects.html">Projects</a>
+            </li>
+            <li>
+                <a href="resume.html">Resume</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Nav Bar Content -->
+    <!-- Main Content of the Page -->
+    <main>
+        <h2> Page Content Example Text</h2>
+        <p>
+            Hi, My name is Mack Jones, and I have a passion for coding/software development. I'm currently going through Centriq's Full Stack Web Developer training program, but I plan to take these skills with me and go onto something greater, little by little!
+        </p>
+    </main>
+    <!-- Main Content of the Page -->
+    <!-- Footer Content -->
+    <footer>&#169;Mack Jones 2020</footer>
+    <!-- Footer Content -->
+    <!-- Boostrap Scripting -->
+    <script src="Scripts/bootstrap.min.js"></script>
 </body>
 </html>
