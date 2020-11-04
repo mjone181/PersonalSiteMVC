@@ -28,16 +28,16 @@
     </div>    
     <!-- Header Content -->
     <!-- Nav Bar Content -->
-    <nav class="nav">
+    <nav class="navbar-nav">
         <ul>
             <li>
                 @Html.ActionLink("Home","Index","Home")
             </li>
             <li>
-               @Html.ActionLink("Contact Me", "Contact", "Home")
+                @Html.ActionLink("Contact Me", "Contact", "Home")
             </li>
             <li>
-                <a href="links.html">Links</a>
+                @Html.ActionLink("Links", "Links", "Home")
             </li>
             <li>
                 <a href="projects.html">Projects</a>
@@ -52,12 +52,13 @@
     @RenderBody()
     <!-- Main Content of the Page -->
     <!-- Footer Content -->
-    <div class="col-md-offset-4">
-        <footer>&#169;Mack Jones 2020</footer>
+    <div class="col-md-4">
+        <footer class="modal-footer">&#169;Mack Jones 2020</footer>
     </div>    
     <!-- Footer Content -->
     <!-- Boostrap Scripting -->
     <script src="~/Content/Scripts/bootstrap.min.js"></script>
     <script src="~/Content/Scripts/npm.js"></script>
+       
 </body>
 </html>
