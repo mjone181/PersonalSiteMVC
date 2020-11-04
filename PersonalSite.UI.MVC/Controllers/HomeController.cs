@@ -26,5 +26,12 @@ namespace PersonalSite.UI.MVC.Controllers
 
             return View();
         }
+
+        public ActionResult Links()
+        {
+            ViewBag.Message = "Links page";
+
+            return View();
+        }
     }
 }

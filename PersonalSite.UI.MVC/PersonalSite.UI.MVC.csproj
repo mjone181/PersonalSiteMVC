@@ -201,6 +201,7 @@
     <Content Include="_Archive\Fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="_Archive\Fonts\glyphicons-halflings-regular.woff" />
     <Content Include="_Archive\Fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Views\Home\Links.cshtml" />
     <None Include="_Archive\packages.config" />
     <Content Include="_Archive\Web.config" />
   </ItemGroup>
