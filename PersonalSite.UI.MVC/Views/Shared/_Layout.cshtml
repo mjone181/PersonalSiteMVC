@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Bootstrap Theme -->
-    <link href="CSS/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/CSS/bootstrap-theme.min.css" rel="stylesheet" />
 
     <!-- Title -->
     <title>Homepage (Work in Progress Site)</title>
@@ -30,7 +30,7 @@
                 @Html.ActionLink("Home","Index","Home")
             </li>
             <li>
-                <a href="contact.html">Contact</a>
+               @Html.ActionLink("Contact Me", "Contact", "Contact")
             </li>
             <li>
                 <a href="links.html">Links</a>
@@ -51,6 +51,6 @@
     <footer>&#169;Mack Jones 2020</footer>
     <!-- Footer Content -->
     <!-- Boostrap Scripting -->
-    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="~/Content/Scripts/bootstrap.min.js"></script>
 </body>
 </html>
