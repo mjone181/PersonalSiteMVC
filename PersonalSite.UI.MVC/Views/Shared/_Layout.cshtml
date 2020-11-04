@@ -4,6 +4,9 @@
     <!-- Character Set -->
     <meta charset="utf-8" />
 
+    <!--Viewport for Mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Special Internet Explorer treatment lifted from class. -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -14,51 +17,55 @@
 
     <!-- Title -->
     <title>Homepage (Work in Progress Site)</title>
-
 </head>
 <body>
     <!-- Header Content -->
-    <div class="col-md-4">
-        <header>
-            <h1>My Personal Site</h1>
-            <p>
-                Excuse the mess, but I'm still working on things. This will look pretty eventually, I promise!
-            </p>
-        </header>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <header>
+                <h1>My Personal Site</h1>
+                <p>
+                    Excuse the mess, but I'm still working on things. This will look pretty eventually, I promise!
+                </p>
+            </header>
+        </div>
     </div>    
     <!-- Header Content -->
     <!-- Nav Bar Content -->
-    <nav class="navbar-nav">
-        <ul>
-            <li>
-                @Html.ActionLink("Home","Index","Home")
-            </li>
-            <li>
-                @Html.ActionLink("Contact Me", "Contact", "Home")
-            </li>
-            <li>
-                @Html.ActionLink("Links", "Links", "Home")
-            </li>
-            <li>
-                <a href="projects.html">Projects</a>
-            </li>
-            <li>
-                <a href="resume.html">Resume</a>
-            </li>
-        </ul>
-    </nav>
+    <div class="container">
+        <nav class="navbar">
+            <ul>
+                <li>
+                    @Html.ActionLink("Home", "Index", "Home")
+                </li>
+                <li>
+                    @Html.ActionLink("Contact Me", "Contact", "Home")
+                </li>
+                <li>
+                    @Html.ActionLink("Links", "Links", "Home")
+                </li>
+                <li>
+                    <a href="projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="resume.html">Resume</a>
+                </li>
+            </ul>
+        </nav>
+    </div>    
     <!-- Nav Bar Content -->
     <!-- Main Content of the Page -->
-    @RenderBody()
+    <div class="container">
+        @RenderBody()
+    </div>    
     <!-- Main Content of the Page -->
     <!-- Footer Content -->
     <div class="col-md-4">
         <footer class="modal-footer">&#169;Mack Jones 2020</footer>
-    </div>    
+    </div>
     <!-- Footer Content -->
     <!-- Boostrap Scripting -->
-    <script src="~/Content/Scripts/bootstrap.min.js"></script>
-    <script src="~/Content/Scripts/npm.js"></script>
-       
+    <script src="~/Content/Scripts/jquery.js"></script>
+    <script src="~/Content/Scripts/bootstrap.min.js"></script> 
 </body>
 </html>
