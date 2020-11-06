@@ -33,5 +33,17 @@ namespace PersonalSite.UI.MVC.Controllers
 
             return View();
         }
+
+        public ActionResult Projects()
+        {
+            ViewBag.Message = "Current Projects";
+            return View();
+        }
+
+        public ActionResult Resume()
+        {
+            ViewBag.Message = "My Resume";
+            return View();
+        }
     }
 }
