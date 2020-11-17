@@ -20,11 +20,14 @@ namespace PersonalSite.UI.MVC
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+                      "~/Content/Scripts/bootstrap.min.js",
+                      "~/Content/Scripts/jquery.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/CSS/bootstrap.min.css",
+                      "~/Content/CSS/bootstrap-theme.min.css",
+                      "~/Content/site.css",
+                      "~/Content/CSS/custom.css"));
         }
     }
 }
