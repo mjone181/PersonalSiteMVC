@@ -19,7 +19,7 @@
 <body>
     <!-- Header Content -->
     <div class="container-fluid">
-        <div class="navbar-header">
+        <div class="navbar-header bg-info">
             <header class="navbar-text">
                 <h1>My Personal Site</h1>
                 <p>
@@ -27,31 +27,32 @@
                 </p>
             </header>
         </div>
+        <!-- Nav Bar Content -->
+        <div class="container-fluid bg-info">
+            <nav class="nav navbar-left">
+                <ul>
+                    <li class="btn btn-default" href="#" role="button">
+                        @Html.ActionLink("Home", "Index", "Home")
+                    </li>
+                    <li class="btn btn-default" href="#" role="button">
+                        @Html.ActionLink("Contact Me", "Contact", "Home")
+                    </li>
+                    <li class="btn btn-default" href="#" role="button">
+                        @Html.ActionLink("Links", "Links", "Home")
+                    </li>
+                    <li class="btn btn-default" href="#" role="button">
+                        @Html.ActionLink("Projects", "Projects", "Home")
+                    </li>
+                    <li class="btn btn-default" href="#" role="button">
+                        @Html.ActionLink("Resume", "Resume", "Home")
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Nav Bar Content -->
     </div>    
     <!-- Header Content -->
-    <!-- Nav Bar Content -->
-    <div class="container">
-        <nav class="nav navbar-left">
-            <ul>
-                <li class="nav navbar-btn">
-                    @Html.ActionLink("Home", "Index", "Home")
-                </li>
-                <li class="nav navbar-btn">
-                    @Html.ActionLink("Contact Me", "Contact", "Home")
-                </li>
-                <li class="nav navbar-btn">
-                    @Html.ActionLink("Links", "Links", "Home")
-                </li>
-                <li class="nav navbar-btn">
-                    <a href="projects.html">Projects</a>
-                </li>
-                <li class="nav navbar-btn">
-                    <a href="resume.html">Resume</a>
-                </li>
-            </ul>
-        </nav>
-    </div>    
-    <!-- Nav Bar Content -->
+    
     <!-- Main Content of the Page -->
     <div class="container-fluid">
         @RenderBody()
@@ -60,13 +61,11 @@
     <!-- Footer Content -->
     <div class="container-fluid">
         <div class="col-md-4">
-            <footer class="panel-footer">&#169; Mack Jones 2020</footer>
+            <footer class="panel-footer bg-success">&#169; Mack Jones 2020</footer>
         </div>
     </div>    
     <!-- Footer Content -->
-    <!-- Boostrap Scripting -->
-    @*<script src="~/Content/Scripts/jquery.js"></script>
-    <script src="~/Content/Scripts/bootstrap.min.js"></script>*@
+    <!-- Boostrap Scripting -->   
     @Scripts.Render("~/bundles/bootstrap")
 
     @RenderSection("scripts", required: false)

@@ -1,1 +1,8 @@
-﻿
+﻿/*Navbar Header Styling*/
+.navbar-header {
+    border: hidden;
+}
+
+.nav navbar-left{
+    border: hidden;
+}
