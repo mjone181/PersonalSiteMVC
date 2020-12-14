@@ -9,7 +9,7 @@ namespace PersonalSite.UI.MVC
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Content/assets/js/jquery.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -17,11 +17,14 @@ namespace PersonalSite.UI.MVC
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
+                        "~/Content/assets/js/modernizr.custom.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Content/Scripts/bootstrap.min.js",
-                      "~/Content/Scripts/jquery.js"));
+                      "~/Content/assets/js/bootstrap.min.js",
+                      "~/Content/assets/js/plugins.js",
+                      "~/Content/assets/js/imagesloaded.js",
+                      "~/Content/assets/js/prettyPhoto.js",
+                      "~/Content/assets/js/init.js"));
 
             bundles.Add(new StyleBundle("~/Content/assets/css").Include(
                       "~/Content/CSS/assets/css/bootstrap.css",

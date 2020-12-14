@@ -13,23 +13,69 @@
 
     <!-- Quote Theme -->
     @Styles.Render("~/Content/css")
+    <link href='http://fonts.googleapis.com/css?family=Cabin:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+
+    <!--Quotes Script-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            jQuery('#headerwrap').backstretch([
+                "assets/img/bg/bg1.jpg",
+                "assets/img/bg/bg2.jpg",
+                "assets/img/bg/bg3.jpg"
+            ], { duration: 8000, fade: 500 });
+
+            // Map Position And Settings
+            $("#mapwrapper").gMap({
+                controls: false,
+                scrollwheel: false,
+                markers: [{
+                    latitude: 40.7566,
+                    longitude: -73.9863,
+                    icon: {
+                        image: "assets/img/marker.png",
+                        iconsize: [44, 44],
+                        iconanchor: [12, 46],
+                        infowindowanchor: [12, 0]
+                    }
+                }],
+                icon: {
+                    image: "assets/img/marker.png",
+                    iconsize: [26, 46],
+                    iconanchor: [12, 46],
+                    infowindowanchor: [12, 0]
+                },
+                latitude: 40.7566,
+                longitude: -73.9863,
+                zoom: 14
+            });
+        });
+    </script>
 
     <!-- Title -->
     <title>Homepage (Work in Progress Site)</title>
 </head>
 <body>
     <!-- Header Content -->
-    <div class="container-fluid">
+    @*<div class="container-fluid">
         <div class="navbar-header bg-info">
             <header class="navbar-text">
                 <h1>My Personal Site</h1>
                 <p>
-                    Excuse the mess, but I'm still working on things. This will look pretty eventually, I promise!
+                    Personal Site, Now With An Actual Template!
                 </p>
             </header>
+        </div>*@
+    <div id="preloader"></div>
+
+    <div id="search-wrapper">
+        <div class="container">
+            <input id="search-box" placeholder="Search"><span class="close-trigger"><i class="fa fa-angle-up"></i></span>
         </div>
-        <!-- Nav Bar Content -->
-        <div class="container-fluid bg-info">
+    </div>
+    <!-- Nav Content -->
+    @*  OLD NAV CONTENT
+            <div class="container-fluid bg-info">
             <nav class="nav navbar-left">
                 <ul>
                     <li class="btn btn-default" href="#" role="button">
@@ -49,26 +95,78 @@
                     </li>
                 </ul>
             </nav>
+        </div>*@
+
+    <!--New Nav-->
+    <nav class="menu" id="theMenu">
+        <div class="menu-wrap">
+            <i class="fa fa-bars menu-close"></i>
+            <div id="menu-logo">
+                <h2><span class="pe-7s-chat logo-icon"></span> Quote</h2>
+            </div>
+            <ul id="main-menu">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <i class="fa fa-home menu-icon"></i></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            @Html.ActionLink("Home", "Index", "Home")
+                        </li>
+                        <li>
+                            @Html.ActionLink("Contact Me", "Contact", "Home")
+                        </li>
+                        <li>
+                            @Html.ActionLink("Links", "Links", "Home")
+                        </li>
+                        <li>
+                            @Html.ActionLink("Projects", "Projects", "Home")
+                        </li>
+                        <li>
+                            @Html.ActionLink("Resume", "Resume", "Home")
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-        <!-- Nav Bar Content -->
-    </div>    
+    </nav>
+
+    <!-- Nav Content -->
     <!-- Header Content -->
-    
+    <!-- Quote Image Section -->
+    <div id="headerwrap">
+        <div class="container">
+            <div class="row">
+                <div id="bannertext" class="col-lg-8 col-lg-offset-2">
+                    <h1 class="fade-down gap"><span class="pe-7s-chat"></span> QUOTE</h1>
+                    <h2 class="fade-up">Something Rather Awesome Is Afoot...</h2>
+                    <div class="spacer"></div>
+                </div>
+            </div><!-- row -->
+        </div><!-- /container -->
+        <span class="headerwrap-btn-wrap">
+            <a href="#content-wrapper" class="headerwrap-btn"><i class="fade-up fa fa-angle-down"></i></a>
+        </span>
+    </div><!-- /headerwrap -->
+    <!-- Header Content-->
     <!-- Main Content of the Page -->
-    <div class="container-fluid">
+    <div id="content-wrapper">
         @RenderBody()
-    </div>    
+    </div>
     <!-- Main Content of the Page -->
     <!-- Footer Content -->
     <div class="container-fluid">
         <div class="col-md-4">
             <footer class="panel-footer bg-success">&#169; Mack Jones 2020</footer>
         </div>
-    </div>    
+    </div>
     <!-- Footer Content -->
-    <!-- Boostrap Scripting -->   
+    <!-- Boostrap/Quote Scripting -->
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquery")
 
     @RenderSection("scripts", required: false)
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWDPCiH080dNCTYC-uprmLOn2mt2BMSUk&amp;sensor=true"></script>
+
 </body>
 </html>

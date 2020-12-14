@@ -2,32 +2,23 @@
     ViewBag.Title = "Home Page";
 }
 
-<main>    
+<!--Main Content-->
+<main>
+    <!--View Title-->
     <h2 class="page-header"> @ViewBag.Title </h2>
-    <div class="row">
-        <!--Container for Page Content-->
-        <div class="col-md-6">
-            <!--Introductions Block-->
-            <h3 class="modal-header bg-primary"> Introductions </h3>
-            <p class="bg-info">
-                Hi, My name is Mack Jones, and I have a passion for coding/software development. I've always loved making things ever since I was little, so my passion eventually lead me into software/game development. In the past, I have worked in things such as Game Development and Computer Science either for education or for personal projects, so I have acquired somewhat of a basic Developer skillset. My hobbies include coding for fun, playing video games, reading books/comics/manga, watching TV shows/anime, and trying to catch up on sleep whenever I can (I'm perpetually tired). I'm always down for a challenge, and I enjoy tackling new concepts whenever I can.
-            </p>
-            <!--Introductions Block-->
+
+    <section id="about" class="section-wrapper">
+        <div class="container">
+            <div class="centered gap fade-down section-heading">
+                <h2 class="main-title">Our Story</h2>
+                <hr>
+                <p>She evil face fine calm have now. Separate screened he outweigh of distance landlord.</p>
+            </div>
+            <div class="row gap">
+                <div class="col-md-8 col-md-offset-2">
+                    <img src="assets/img/screens.png" class="fade-up img-responsive" alt="Alt" />
+                </div>
+            </div>
         </div>
-        <div class="col-md-6">
-            <!--Previous Experience Block-->
-            <h3 class="modal-header bg-primary"> Previous Experience </h3>
-            <p class="bg-info">
-                My previous experience includes education at Johnson County Community College for Game Development/Computer Science (2 years), Computer Science at Wichita State University/Fort Hays State University (an additional 1 1/2 years), and dabbling in some side-projects along the way. For programming languages specifically, I have dabbled in C++, C#, and a light bit of Java. Currently at Centriq, I have practiced HTML, CSS, JavaScript, more C#, and handled  a bit of Microsoft SQL. After Centriq, I plan to continue to expand my experience/skillset by continuing to work on future projects wherever possible.
-            </p>
-            <!--Previous Experience Block-->
-        </div>
-        <div class="col-md-6">
-            <!--Centriq Experience Block-->
-            <h3 class="modal-header bg-primary"> Experience With Centriq </h3>
-            <p class="bg-info">
-                Currently at Centriq, I have practiced HTML, CSS, JavaScript, more C#, and handled  a bit of Microsoft SQL. I am continuing to build out my Portfolio projects and personal projects for practice as well. After Centriq, I plan to continue to expand my experience/skillset by continuing to work on future projects wherever possible.
-            </p>
-        </div><!--Centriq Experience Block-->
-    </div>
+    </section>
 </main>
