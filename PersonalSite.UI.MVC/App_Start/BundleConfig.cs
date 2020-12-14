@@ -23,11 +23,13 @@ namespace PersonalSite.UI.MVC
                       "~/Content/Scripts/bootstrap.min.js",
                       "~/Content/Scripts/jquery.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/CSS/bootstrap.min.css",
-                      "~/Content/CSS/bootstrap-theme.min.css",
-                      "~/Content/site.css",
-                      "~/Content/CSS/custom.css"));
+            bundles.Add(new StyleBundle("~/Content/assets/css").Include(
+                      "~/Content/CSS/assets/css/bootstrap.css",
+                      "~/Content/CSS/assets/css/animate.css",
+                      "~/Content/CSS/assets/css/prettyPhoto.css",
+                      "~/Content/CSS/assets/css/pe-icons.css",
+                      "~/Content/CSS/assets/css/style.css",
+                      "~/Content/CSS/assets/css/font-awesome.min.css"));
         }
     }
 }
