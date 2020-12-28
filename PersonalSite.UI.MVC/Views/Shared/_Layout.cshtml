@@ -97,10 +97,13 @@
             <ul id="main-menu">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <i class="fa fa-home menu-icon"></i></a>
+                    <!--Main Links to get around the Site-->
                     <ul class="dropdown-menu">
-                        <li><a href="index.html">Home Page</a></li>
-                        <li><a href="index-blog.html">Home Blog</a></li>
-                        <li><a href="index-single-page.html"></a></li>
+                        <li><a href="@Url.Action("Index", "Home")">Home Page</a></li>
+                        <li><a href="@Url.Action("Projects", "Home")">My Projects</a></li>
+                        <li><a href="@Url.Action("Links", "Home")">Links</a></li>
+                        <li><a href="@Url.Action("Contact", "Home")">Contact Me</a></li>
+                        <li><a href="@Url.Action("Resume", "Home")">My Resume</a></li>
                     </ul>
                 </li>                
             </ul>            
